@@ -166,6 +166,31 @@
                 <artifactId>reactive-lib-service-discovery-lagom14-java_${scala.binary.version}</artifactId>
                 <version>0.6.0</version>
             </dependency>
+            <!-- Override dependencies and transitive dependencies that have known vulnerabilities -->
+            <dependency>
+                <!-- Override due to CVE-2018-10237 -->
+                <groupId>com.google.guava</groupId>
+                <artifactId>guava</artifactId>
+                <version>24.1.1-jre</version>
+            </dependency>
+            <dependency>
+                <!-- Override due to CVE-2018-11771 -->
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-compress</artifactId>
+                <version>1.18</version>
+            </dependency>
+            <dependency>
+                <!-- Override due to CVE-2018-11771 -->
+                <groupId>commons-codec</groupId>
+                <artifactId>commons-codec</artifactId>
+                <version>1.11</version>
+            </dependency>
+            <dependency>
+                <!-- Override due to CVE-2018-16131 -->
+                <groupId>com.typesafe.akka</groupId>
+                <artifactId>akka-http-core_2.12</artifactId>
+                <version>10.0.14</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 
